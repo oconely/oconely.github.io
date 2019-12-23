@@ -1,0 +1,55 @@
+@import '../../../postcss/variables.css';
+
+.footer {
+    margin-top: toRem(120);
+    padding-top: toRem(20);
+    padding-bottom: toRem(20);
+    margin-top: auto;
+
+    @media (min-width: 820px) {
+        padding-bottom: toRem(40);
+    }
+}
+
+.footer__site-logo {
+    width: 30px;
+    height: 30px;
+    fill: $accent;
+    margin-right: toRem(10);
+}
+
+.footer__name {
+    font-family: $MuliBlack;
+    font-size: toRem(18);
+    margin-bottom: toRem(10);
+    display: flex;
+    align-items: center;
+}
+
+.footer__inner {
+
+    @media (min-width: 820px) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: toRem(15);
+    }
+}
+
+.footer__item {
+    flex: 1;
+    margin-bottom: toRem(20);
+
+    @media (min-width: 820px) {
+        margin-bottom: initial;    
+    }
+}
+
+.footer__links {
+    padding-top: toRem(20);
+
+    @media (min-width: 820px) {
+        padding-top: initial;
+        justify-self: end;
+        align-self: center;
+    }
+}

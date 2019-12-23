@@ -1,0 +1,11 @@
+@import '../../../postcss/variables.css';
+
+.post__top {
+    margin-top: toRem(30);
+}
+
+.post__header {
+    margin-bottom: toRem(100);
+}
+
+

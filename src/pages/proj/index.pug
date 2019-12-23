@@ -1,0 +1,12 @@
+extends ../tpl/layout.pug
+
+block vars
+    - isIndex = true
+
+block main
+    include ../../components/pages/index/main/index
+    include ../../components/public/overlay-bg/index
+block modals
+    .photoSwipe
+block toTopButton
+    include ../../components/public/toTopButton/index

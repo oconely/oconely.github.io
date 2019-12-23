@@ -1,0 +1,82 @@
+@import '../../../postcss/variables.css';
+
+.hamburger {
+    width: 30px;
+    height: 30px;
+    box-sizing: content-box;
+    background: 0 0;
+    border: 0;
+    user-select: none;
+    display: inline-block;
+    padding: 15px 10px;
+    cursor: pointer;
+    outline: none;
+    //transition: background-color 1s 0.2s $cubic;
+}
+
+
+.hamburger__line {
+    display: inline-block;
+    width: 30px;
+    height: 3px;
+    /* border-radius: 4px; */
+    background: #000;
+    vertical-align: middle;
+    position: relative;
+}
+
+.hamburger__line_anim {
+    transition: background 0.3s 0.3s $cubic;
+}
+
+.mobMenu_open .hamburger {
+    /* background-color: color(#000 tint(15%));
+    transition: background-color 1s 0.1s $cubic; */
+}
+
+.mobMenu_open .hamburger > .hamburger__line {
+    background: 0 0;
+    transition: background 0.3s $cubic;
+}
+
+.mobMenu_open .hamburger > .hamburger__line::before {
+    transform: rotate(45deg);
+    top: 0px;
+    width: 30px;
+    transition: top 0.3s, transform 0.3s 0.3s, width 0.3s;
+    transition-timing-function: $cubic;
+    //background: color($accent tint(0%));
+}
+
+.mobMenu_open .hamburger > .hamburger__line::after {
+    transform: rotate(-45deg);
+    top: 0px;
+    transition: top 0.3s, transform 0.3s 0.3s;
+    transition-timing-function: $cubic;
+    //background: color($accent tint(0%));
+}
+
+.hamburger__line::before,
+.hamburger__line::after {
+    /* border-radius: 4px; */
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #000;
+    left: 0;
+    transform-origin: 50% 50%;
+    transition: top 0.3s 0.3s, transform 0.3s;
+    transition-timing-function: $cubic;
+}
+
+.hamburger__line::before {
+    top: 10px;
+    width: 20px;
+    transition: width 0.3s 0.3s, top 0.3s 0.3s, transform 0.3s;
+    transition-timing-function: $cubic;
+}
+
+.hamburger__line::after {
+    top: -10px;
+}

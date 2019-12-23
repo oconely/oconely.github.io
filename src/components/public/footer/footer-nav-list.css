@@ -1,0 +1,31 @@
+@import '../../../postcss/variables.css';
+
+
+.footer-nav__list {
+    display: flex;
+}
+
+.footer-nav__item:not(:last-of-type) {
+    margin-right: toRem(20);
+}
+
+.footer-nav__item_about_me .link {
+    box-shadow: inset 0 -0.5em 0 color($lightGreen tint(75%));
+}
+.footer-nav__item_about_me .link:hover {
+    box-shadow: inset 0 -1.2rem color($lightGreen tint(30%));
+}
+
+.footer-nav__item_projects .link {
+    box-shadow: inset 0 -0.5em 0 color($red tint(75%));
+}
+.footer-nav__item_projects .link:hover {
+    box-shadow: inset 0 -1.2rem color($red tint(30%));
+}
+
+.footer-nav__item_cv .link {
+    box-shadow: inset 0 -0.5em 0 color($linkedin tint(75%));
+}
+.footer-nav__item_cv .link:hover {
+    box-shadow: inset 0 -1.2rem color($linkedin tint(30%));
+}

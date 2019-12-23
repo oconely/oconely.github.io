@@ -1,0 +1,124 @@
+@import '../../../postcss/variables.css';
+
+.page-header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, transform 0.25s ease-in-out;
+    transform-origin: top;
+
+    @media (min-width: $sm) {
+        padding: toRem(26) 0 toRem(26);
+    }
+}
+
+.mobMenu_open .page-header,
+.mobMenu_open .page-header_slim {
+    background-color: rgba(255,255,255,1);
+    box-shadow: none;
+}
+
+.page-header_slim {
+    background-color: rgba(255,255,255,0.7);
+    box-shadow: 0 1px 15px color($accent a(20%));
+
+    @media (min-width: $sm) {
+        transform: scaleY(0.7);
+    }
+}
+
+.page-header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.25s ease-in-out;
+}
+
+.page-header_slim .page-header__inner {
+
+    @media (min-width: $sm) {
+        transform: scaleY(1.395);
+    }
+}
+
+.page-header__logo {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+
+.page-header__nav {
+    @media (max-width: 767px) {
+        position: fixed;
+        height: calc(100vh - 60px);
+        background: #fff;
+        left: 0;
+        min-width: 300px;
+        max-width: 400px;
+        z-index: 1;
+        transform: translateX(-100%);
+        visibility: hidden;
+        top: 60px;
+        border-top: 1px solid rgb(102, 102, 102);
+        will-change: transform;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    @media (min-width: $sm) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.page-header__nav_anim {
+    transition: transform 0.3s 0.1s $cubic, visibility 0.3s 0.1s;
+    will-change: transform;
+}
+
+.mobMenu_open .page-header__nav {
+    transform: translateX(0);
+    visibility: visible;
+    
+}
+
+.page-header__controls {
+    @media (min-width: $sm) {
+        display: none;
+    }
+}
+
+.page-header__hamburger {
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.page-header__logo-icon {
+    fill: $accent;
+}
+
+.page-header__link:not(:last-of-type) {
+    display: none;
+
+
+    @media (min-width: $sm) {
+        margin-left: toRem(50);
+        display: initial;
+    }
+}
+
+.page-header_slim .page-header__link {
+    box-shadow: inset 0 -0.5rem 0 color($accent tint(40%));
+}
+
+
+
+.button.page-header__btn {
+    @media (min-width: $pre-sm) {
+        display: none;
+    }
+}

@@ -1,0 +1,21 @@
+@import '../../postcss/variables.css';
+
+.pswp__zoom-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    video {
+        min-width: 300px;
+        height: auto;
+    }
+}
+
+.pswp__caption .pswp__caption__center {
+    text-align: center;
+    font-size: toRem(20);
+
+    @media (min-width: $sm) {
+        font-size: toRem(25);
+    }
+}

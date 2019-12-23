@@ -1,0 +1,21 @@
+@import '../../../postcss/variables.css';
+
+.box {
+    padding-left: toRem(10);
+    padding-right: toRem(10);
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: $sm) {
+        padding-left: toRem(15);
+        padding-right: toRem(15);
+    }
+}
+
+.box_limit-sm {
+    max-width: 759px;
+}
+
+.box_limit-lg {
+    max-width: 1378px;
+}

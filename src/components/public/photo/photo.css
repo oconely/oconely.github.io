@@ -1,0 +1,19 @@
+@import '../../../postcss/variables.css';
+
+.photo {
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+    overflow: hidden;
+    position: relative;
+}
+
+.photo img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center -50px;
+}

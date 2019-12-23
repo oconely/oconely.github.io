@@ -1,0 +1,28 @@
+block vars
+	- let isIndex
+
+<!DOCTYPE html>
+html(lang="ru").page
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		title= htmlWebpackPlugin.options.title
+		link(rel="icon" type="image/png" sizes="53x53" href=require('../../favicons/favicon.png'))
+		//- link(rel="shortcut icon" href=require('../../images/favicons/favicon.png'))
+		meta(name="theme-color" content="#3A444D")
+	body
+		if isIndex
+			svg.clipPathSvg
+				clipPath(id="path-wave" clipPathUnits="objectBoundingBox")
+					path(d="M0,0 S0.102,0.512,0.309,0.646 S0.644,0.646,0.644,0.646 S0.788,0.47,0.892,0.467 C0.925,0.466,0.997,0.478,1,0.53 V0.716 H1 S1,0.516,0.674,0.888 S0,0.586,0,0.586")
+			.banner-bg(
+				data-banner-bg=require('../../images/public/banner.jpg')
+				style=`background-image: url(${require('../../images/public/banner-filler.jpg')})`
+			)
+		.global-container
+			include ../../components/public/header/index
+			block main
+			include ../../components/public/footer/index
+		block modals
+		block toTopButton

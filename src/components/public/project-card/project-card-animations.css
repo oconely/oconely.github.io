@@ -1,0 +1,39 @@
+@import '../../../postcss/variables.css';
+
+@keyframes santaMovement {
+  0% {
+    transform: translate(40px, 60px);
+  }
+  100% {
+    transform: translate(-500px, -60px);
+  }
+}
+@keyframes santaRotate {
+  0% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+
+@keyframes snowX {
+  0% {
+    background-position-x: 0, right, 0;
+  }
+  100% {
+    background-position-x: 1120px, right, 0;
+  }
+}
+
+@keyframes snowY {
+  0% {
+    background-position-y: 0, bottom, 0;
+  }
+  100% {
+    background-position-y: 210px, bottom, 0;
+  }
+}

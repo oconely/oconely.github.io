@@ -1,0 +1,76 @@
+@import '../../../postcss/variables.css';
+
+.case-clicken .project-card__bg-layer {
+	background:
+	url('./images/fillers/clicken-filler.jpg') -30px 0 / cover no-repeat;
+}
+
+.case-map-app .project-card__bg-layer {
+	background: url('./images/fillers/korovka-geo-app-filler.jpg') no-repeat;
+    background-size: cover; 
+}
+
+.case-amp .project-card__bg-layer {
+	background:
+	url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cpath d='M171.887 116.28l-53.696 89.36h-9.728l9.617-58.227-30.2.047c-2.684 0-4.855-2.172-4.855-4.855 0-1.152 1.07-3.102 1.07-3.102l53.52-89.254 9.9.043-9.86 58.317 30.413-.043c2.684 0 4.855 2.172 4.855 4.855 0 1.088-.427 2.044-1.033 2.854l.004.004zM128 0C57.306 0 0 57.3 0 128s57.306 128 128 128 128-57.306 128-128S198.7 0 128 0z' fill='%23fff' fill-rule='evenodd'/%3E%3C/svg%3E") 60% center / 200px no-repeat,
+	linear-gradient(149deg, rgba(85, 85, 85, 0.05) 0%, rgba(85, 85, 85, 0.05) 25%,rgba(11, 11, 11, 0.05) 25%, rgba(11, 11, 11, 0.05) 50%,rgba(182, 182, 182, 0.05) 50%, rgba(182, 182, 182, 0.05) 75%,rgba(28, 28, 28, 0.05) 75%, rgba(28, 28, 28, 0.05) 100%),linear-gradient(232deg, rgba(145, 145, 145, 0.05) 0%, rgba(145, 145, 145, 0.05) 25%,rgba(165, 165, 165, 0.05) 25%, rgba(165, 165, 165, 0.05) 50%,rgba(84, 84, 84, 0.05) 50%, rgba(84, 84, 84, 0.05) 75%,rgba(131, 131, 131, 0.05) 75%, rgba(131, 131, 131, 0.05) 100%),linear-gradient(321deg, rgba(254, 254, 254, 0.05) 0%, rgba(254, 254, 254, 0.05) 25%,rgba(249, 249, 249, 0.05) 25%, rgba(249, 249, 249, 0.05) 50%,rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 75%,rgba(104, 104, 104, 0.05) 75%, rgba(104, 104, 104, 0.05) 100%),linear-gradient(90deg, rgb(21, 8, 116),rgb(111, 197, 250));
+	/* $blue; */
+}
+
+.designpack-wp .project-card__bg-layer {
+	background: url('./images/fillers/designpack-filler.jpg') 0 0 / cover no-repeat;
+}
+
+.case-korovka-adaptive .project-card__bg-layer {
+	background: url('./images/fillers/korovka-adapt-filler.jpg') no-repeat;
+    background-size: cover;
+}
+
+
+.ny-app-korovka .project-card__bg-layer {
+    position: relative;
+	background: 
+        url('./images/svg/Group 3.svg') -680px 104% no-repeat, 
+        linear-gradient(to right, #C7EBFF, #92CDFA);
+}
+
+.ny-app-korovka .project-card__bg-layer:before {
+	animation: snowY 5s linear infinite, snowX 55s linear infinite;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./images/svg/snow.svg') 0 0;
+}
+
+/* 
+url('./images/svg/snow.svg') 0 0, 
+*/
+.korovka-facet-filter .project-card__bg-layer {
+    background: url('./images/fillers/facet-filter-filler.jpg') right center no-repeat;
+    background-size: cover;
+}
+
+.santa {
+	animation: santaMovement 20s linear infinite;
+    top: 50%;
+    right: 400px;
+    width: 252px;
+    height: 150px;
+	position: absolute;
+}
+
+.ny-app-korovka .santa::before {
+    animation: santaRotate 4s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: -215px;
+    background: url('./images/svg/santa1.svg') center center no-repeat;
+    background-size: 252px auto;
+    content: "";
+}

@@ -1,0 +1,97 @@
+@import '../../../postcss/variables.css';
+
+.project-card.project-card_sky {
+    background: $sky;
+
+    .project-card__mask {
+        fill: $sky;
+    }
+
+    .project-card__btn:hover {
+        background: color($sky shade(8%));
+    }
+}
+
+.project-card.project-card_red {
+    background: $red;
+
+    .project-card__mask {
+        fill: $red;
+    }
+
+    .project-card__btn:hover {
+        background: color($red shade(8%));
+    }
+}
+
+.project-card.project-card_deem {
+    background: $deem;
+
+    .project-card__mask {
+        fill: $deem;
+    }
+
+    .project-card__btn:hover {
+        background: color($deem shade(8%));
+    }
+}
+
+.project-card.project-card_violet {
+    background: $violet;
+
+    .project-card__mask {
+        fill: $violet;
+    }
+
+    .project-card__btn:hover {
+        background: color($violet shade(8%));
+    }
+}
+
+.project-card.project-card_blue {
+    background: $blue;
+
+    .project-card__mask {
+        fill: $blue;
+    }
+
+    .project-card__btn:hover {
+        background: color($blue shade(8%));
+    }
+}
+
+.project-card.project-card_lightGreen {
+    background: $lightGreen;
+
+    .project-card__mask {
+        fill: $lightGreen;
+    }
+
+    .project-card__btn:hover {
+        background: color($lightGreen shade(8%));
+    }
+}
+
+.project-card.project-card_duskyCitron {
+    background: $duskyCitron;
+
+    .project-card__mask {
+        fill: $duskyCitron;
+    }
+
+    .project-card__btn:hover {
+        background: color($duskyCitron shade(8%));
+    }
+}
+
+.project-card.project-card_princessBlue {
+    background: $princessBlue;
+
+    .project-card__mask {
+        fill: $princessBlue;
+    }
+
+    .project-card__btn:hover {
+        background: color($princessBlue shade(8%));
+    }
+}
