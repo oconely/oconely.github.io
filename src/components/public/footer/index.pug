@@ -1,0 +1,52 @@
+footer.footer
+    .l-wrap
+        .footer__inner
+            .footer-nav.footer__item
+                span.footer__name 
+                    svg.footer__site-logo
+                        use(xlink:href=require('../../../images/public/svg/site-logo.svg') + "#site-logo")
+                    | Andrew Ribaltovsky
+                ul.ul-reset.footer-nav__list
+                        //- each l, i in ['About me', 'Projects', 'CV']
+                        li(class=`footer-nav__item`) 
+                            a(href="#about").link.link_jumpTo About Me
+                        li(class=`footer-nav__item`) 
+                            a(href="#projects").link.link_jumpTo Projects
+                        li(class=`footer-nav__item`) 
+                            a(href="https://www.linkedin.com/in/andrew-ribaltovsky-98bb5b18a/" target="_blank").link LinkedIn
+                    
+            .footer__descr.footer__item I'm frontend-developer, whos like React, web-performance, setup webpack configs and CSS-grid. 
+                a.link(href="https://www.linkedin.com/in/andrew-ribaltovsky-98bb5b18a/" target="_blank") Check out more
+                | 
+                | about me
+            .footer__links.footer__item
+                ul.ul-reset.footer__links-list.social-list
+                    - 
+                        let links = [
+                            {
+                                id: 'linkedin',
+                                title: 'My profile on linkedIn',
+                                href: 'https://www.linkedin.com/in/andrew-ribaltovsky-98bb5b18a/'
+                            },
+                            {
+                                id: 'telegram',
+                                title: 'Feel free to text me in telegram',
+                                href: 'https://t.me/oconely'
+                            },
+                            {
+                                id: 'github',
+                                title: 'My profile on github',
+                                href: 'https://github.com/oconely'
+                            },
+                            {
+                                id: 'gmail',
+                                title: 'Text me on gmail',
+                                href: 'mailto: and.ribaltovsky@gmail.com'
+                            },
+                        ]
+                    each l, i in links
+                        li(class=`social-list__item`)
+                            a(href=l.href title=l.title class=`social-list__link social-list__link_${l.id}` target="_blank")
+                                svg.social-list__icon
+                                    use(xlink:href=require(`../../../images/public/svg/${l.id}.svg`) + `#${l.id}`)   
+                    

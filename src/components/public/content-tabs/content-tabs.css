@@ -1,0 +1,30 @@
+@import '../../../postcss/variables.css';
+
+.content-tabs {
+    display: flex;
+}
+
+.content-tabs__item {
+
+    @media (min-width: $sm) {
+        margin-right: toRem(20);
+    }
+}
+
+.content-tabs__item button {
+    color: #B0B0B0;
+    font-family: $MuliBlackItalic;
+    font-size: toRem(22);
+    cursor: pointer;
+    line-height: normal;
+
+    @media (min-width: $sm) {
+        font-size: toRem(40);
+    }
+    padding: toRem(10) toRem(15);
+}
+
+
+.content-tabs__item_active button {
+    color: $textColor;
+}

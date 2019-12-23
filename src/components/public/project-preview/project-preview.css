@@ -1,0 +1,47 @@
+@import '../../../postcss/variables.css';
+
+.project-preview {
+
+}
+
+.project-preview__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: toRem(10);
+}
+
+.project-preview__icon {
+    width: 25px;
+    height: 25px;
+    margin-right: toRem(15);
+}
+
+.project-preview__icon_accent {
+    fill: $accent;
+}
+
+.project-preview__uri {
+    font-family: $RobotoLight;
+    font-size: toRem(19);
+    text-decoration: none;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.project-preview_github .project-preview__uri {
+    text-transform: initial;
+    font-size: toRem(16);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 60%;
+}
+
+.project-preview__short-note {
+    font-size: toRem(15);
+    margin: 0;
+}
+
+.project-preview__short-note_un {
+    text-decoration: underline;
+}

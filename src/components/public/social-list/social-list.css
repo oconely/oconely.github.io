@@ -1,0 +1,47 @@
+@import '../../../postcss/variables.css';
+
+.social-list {
+    display: flex;
+}
+
+.social-list__link {
+    box-sizing: content-box;
+    width: 20px;
+    height: 20px;
+    padding: toRem(8);
+    background: $accent;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: clip-path 1s;
+    display: block;
+}
+
+.social-list__item:not(:last-of-type) .social-list__link {
+    margin-right: toRem(10);
+}
+
+
+.social-list__item:hover .social-list__link {
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.social-list__link_linkedin {
+    background: $linkedin;
+}
+
+.social-list__link_github {
+    background: $deem;
+}
+
+.social-list__link_gmail {
+    background: $gmail;
+}
+
+.social-list__link_skype {
+    background: $skype;
+}
+
+.social-list__icon {
+    fill: #fff;
+    height: 100%;
+    width: 100%;
+}

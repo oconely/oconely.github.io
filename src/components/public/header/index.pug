@@ -1,0 +1,49 @@
+
+- 
+                        let links = [
+                            {
+                                id: 'linkedin',
+                                title: 'My profile on linkedIn',
+                                href: 'https://www.linkedin.com/in/andrew-ribaltovsky-98bb5b18a/'
+                            },
+                            {
+                                id: 'telegram',
+                                title: 'Feel free to text me in telegram',
+                                href: 'https://t.me/oconely'
+                            },
+                            {
+                                id: 'github',
+                                title: 'My profile on github',
+                                href: 'https://github.com/oconely'
+                            },
+                            {
+                                id: 'gmail',
+                                title: 'Text me on gmail',
+                                href: 'mailto: and.ribaltovsky@gmail.com'
+                            },
+                        ]
+header.page-header
+    .l-wrap
+        nav.page-header__inner
+            if !isIndex
+                span.main-logo.page-header__logo
+                    svg.svg-icon.page-header__logo-icon
+                        use(xlink:href=require('./images/svg/site-logo.svg') + '#site-logo')
+            else 
+                a(href="/build/index.html").main-logo.page-header__logo
+                    svg.svg-icon.page-header__logo-icon
+                        use(xlink:href=require('./images/svg/site-logo.svg') + '#site-logo')
+            .page-header__nav
+                a(href="#about").link.link_jumpTo.page-header__link About me
+                a(href="#projects").link.link_jumpTo.projects.page-header__link Projects
+                a(href="https://www.linkedin.com/in/andrew-ribaltovsky-98bb5b18a/" target="_blank").link.link_linkedin.page-header__link LinkedIn
+                each l, i in links
+                    a(href=l.href target="_blank" title=l.title class=`soc-link_${l.id} soc-link soc-link_mobmenu`)
+                        svg.soc-link__icon
+                            use(xlink:href=require(`../../../images/public/svg/${l.id}.svg`) + `#${l.id}`)
+                //- button.button.page-header__btn.btn-reset Menu
+                
+            .page-header__controls
+                //- a(href="#").link.page-header__link linkedIn
+                button(type="button").page-header__hamburger.hamburger
+                    span.hamburger__line

@@ -1,0 +1,23 @@
+@import '../../../postcss/variables.css';
+
+.overlay-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    background: rgba(0,0,0,0.6);
+    z-index: 19;
+    will-change: opacity;
+}
+
+.overlay-bg_anim {
+    transition: opacity 0.3s $cubic, visibility 0.3s;
+}
+
+.mobMenu_open .overlay-bg {
+    opacity: 1;
+    visibility: visible;
+}

@@ -1,0 +1,9 @@
+@import '../../../postcss/variables.css';
+
+.short-review {
+    text-align: center;
+}
+
+.short-review__item:not(:last-of-type) {
+    margin-bottom: toRem(10);
+}

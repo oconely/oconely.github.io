@@ -1,0 +1,8 @@
+@import '../../../postcss/variables.css';
+
+pre.code-snippet {
+    margin-top: -1px !important;
+    margin-bottom: 0 !important;
+    border-bottom-left-radius: toRem(6);
+    border-bottom-right-radius: toRem(6);
+}

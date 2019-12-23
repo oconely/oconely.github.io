@@ -1,0 +1,11 @@
+@import '../../../postcss/variables.css';
+
+.filename {
+    background: #3e3e3e;
+    padding: .5rem 1rem .75rem;
+    font-size: roRem(16);
+    color: #fff;
+    border-top-left-radius: toRem(6);
+    border-top-right-radius: toRem(6);
+    /* margin-bottom: -2.2rem; */
+}
